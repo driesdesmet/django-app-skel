@@ -9,7 +9,7 @@ This is a starting template for Django 1.4 apps based on the work that was done 
 
 * An app skeleton
 * Setuptools
-* Todo lines for IDE's to pick up on
+* Todo lines for IDE's to pick up on.
 
 ## How to use this template to create your app ##
 
@@ -23,9 +23,9 @@ This is a starting template for Django 1.4 apps based on the work that was done 
 
 {% endif %}
 
-# {{ project_name|title }} Django App #
+# {{ app_name|title }} Django App #
 
 ## About ##
 
 # TODO
-Describe {{ project_name }} here.
+Describe {{ app_name }} here.

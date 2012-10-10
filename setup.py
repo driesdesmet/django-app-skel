@@ -20,12 +20,12 @@ def get_readme():
     return ''
 
 # Use the docstring of the __init__ file to be the description
-DESC = " ".join(__import__('app_name').__doc__.splitlines()).strip()
+DESC = " ".join(__import__('{{ app_name }}').__doc__.splitlines()).strip()
 
 setup(
     name="app_name",
-    version=__import__('app_name').get_version().replace(' ', '-'),
-    url='https://bitbucket.org/dries/app_name', # TODO: check if this url is correct
+    version=__import__('{{ app_name }}').get_version().replace(' ', '-'),
+    url='https://bitbucket.org/dries/{{ app_name }}', # TODO: check if this url is correct
     author='Dries Desmet', # TODO: fill in your name
     author_email='dries@urga.be', # TODO: fill in your e-mail address.
     description=DESC,
