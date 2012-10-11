@@ -1,7 +1,7 @@
 from django.test import TestCase
 
 
-class $$$$PKG_NAME$$$$Test(TestCase):
+class {{ app_name }}Test(TestCase):
     """
     Tests for {{ app_name }}
     """
