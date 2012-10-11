@@ -1,4 +1,8 @@
-from django.shortcuts import render_to_response
-from django.http import HttpResponseRedirect, HttpResponseForbidden, Http404
-from django.template import RequestContext
-from django.utils.translation import ugettext, ugettext_lazy as _
+from django.views.generic import ListView, DetailView
+from models import SimpleModel
+
+class SimpleModelList(ListView):
+    model = SimpleModel
+
+class SimpleModelDetail(DetailView):
+    model = SimpleModel

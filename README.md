@@ -8,7 +8,9 @@ This is a starting template for Django 1.4 apps based on the work that was done 
 ## Features ##
 
 * An app skeleton
+* A simple model with list and detail view
 * Setuptools
+* An example project that has the app installed
 * Todo lines for IDE's to pick up on.
 
 ## How to use this template to create your app ##
@@ -20,12 +22,19 @@ This is a starting template for Django 1.4 apps based on the work that was done 
 
             django-admin.py startapp --template https://github.com/triotorus/django-app-skel/zipball/master --extension py,md,gitignore,dist yourappname
 
-
 {% endif %}
-
 # {{ app_name|title }} Django App #
 
 ## About ##
 
-# TODO
 Describe {{ app_name }} here.
+
+## How to install the app ##
+
+* Simply run 'python setup.py install'
+
+## How to run the example project ##
+
+* cd into the 'example' folder
+* run 'python manage.py syncdb' and fill in the superuser details
+* run 'python manage.py runserver'
