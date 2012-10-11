@@ -1,5 +1,5 @@
 """
-$$$$APP_NAME$$$$
+{{ app_name }}
 """
 __version_info__ = {
     'major': 0,
