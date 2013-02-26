@@ -1,6 +1,6 @@
 from django.contrib import admin
 
-from .models import SimpleModel
+from models import SimpleModel
 
 class SimpleModelAdmin(admin.ModelAdmin):
     list_display = ('name', )

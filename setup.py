@@ -1,6 +1,12 @@
 import os
 from setuptools import setup, find_packages
 
+PROJECT = {{ app_name }}
+URL='https://bitbucket.org/dries/%s' % PROJECT,
+
+
+# Use the docstring of the __init__ file to be the description
+DESC = " ".join(__import__(PROJECT).__doc__.splitlines()).strip()
 
 def read_file(filename):
     """Read a file into a string"""
@@ -19,15 +25,13 @@ def get_readme():
             return read_file(name)
     return ''
 
-# Use the docstring of the __init__ file to be the description
-DESC = " ".join(__import__('{{ app_name }}').__doc__.splitlines()).strip()
 
 setup(
-    name="app_name",
-    version=__import__('{{ app_name }}').get_version().replace(' ', '-'),
-    url='https://bitbucket.org/dries/{{ app_name }}', # TODO: check if this url is correct
-    author='Dries Desmet', # TODO: fill in your name
-    author_email='dries@urga.be', # TODO: fill in your e-mail address.
+    name=PROJECT,
+    version=__import__(PROJECT).__version__,
+    url=URL,
+    author='Dries Desmet',
+    author_email='dries@urga.be',
     description=DESC,
     long_description=get_readme(),
     packages=find_packages(),
